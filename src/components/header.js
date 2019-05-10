@@ -6,21 +6,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import styled from 'styled-components';
-import Header from "./components/header";
-import Main from "./components/main";
-import Menu from "./components/menu"
 
-class App extends Component {
-  render(){
-    return (
-  
-    );
-  }
+class Header extends ReactComponent {
+    render {
+        return (
+            <h1>Header</h1>
+        )
+    }
 }
 
-
-
-
-
-
-export default App;
+export default Header
