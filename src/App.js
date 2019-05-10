@@ -14,7 +14,7 @@ class App extends Component {
       <div className="center">
           <FuncName name="Optimus" streetname="Chicko" link="https://brodude.ru/wp-content/uploads/2019/03/29/brodude.ru_29.03.2019_YwSQH2TcFzqD8-985x1024.jpg"/>
           <FuncName name="Ronimus" streetname="Min'ko" link="https://brodude.ru/wp-content/uploads/2019/03/29/brodude.ru_29.03.2019_4oKoajiSvKwLQ-1024x1024.jpg"/>
-          <FuncName name="Galvatron" streetname="Mucki" link="#"/>
+          <FuncName name="Blackrobo" streetname="Mucki" link="#"/>
       </div>
     );
   }
