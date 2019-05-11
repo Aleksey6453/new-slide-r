@@ -13,7 +13,7 @@ import Menu from "./components/menu"
 class App extends Component {
   render(){
     return (
-  
+       <h2>Only test</h2>
     );
   }
 }
