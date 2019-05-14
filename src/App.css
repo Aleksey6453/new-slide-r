@@ -2,10 +2,14 @@
   outline: none;
 }
 
-.App {
+.wrap {
   box-sizing: border-box;
   font-family: "roboto";
-  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
 }
 
