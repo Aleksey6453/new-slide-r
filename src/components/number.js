@@ -1,5 +1,13 @@
 import React from "react";
 
-const Number = () => (Math.round(Math.random() * 1000))
+const Number = (props) => {
+    return (
+       <div>
+           <h1>Car name : {props.name}</h1>
+           <p>Age car : {props.age}</p>
+       </div>  
+    )
+    
+}
 
 export default Number

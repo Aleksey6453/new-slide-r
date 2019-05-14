@@ -8,7 +8,9 @@ class App extends Component {
   render(){
     return (
       <div className="wrap">
-         <Number />
+         <Number name="Audё" age={7}/>
+         <Number name="Мицуба" age={13}/>
+      
       
       </div>
       
