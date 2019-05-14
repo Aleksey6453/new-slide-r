@@ -10,7 +10,10 @@ class App extends Component {
       <div className="wrap">
          <Number name="Audё" age={7}/>
          <Number name="Мицуба" age={13}/>
-      
+         <Number name="Mazda" age={10}>
+           <p style={{color: "lime"}}>Color</p>
+           <p style={{color: "teal"}}>Color</p>
+         </Number>
       
       </div>
       
