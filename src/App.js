@@ -42,11 +42,13 @@ class App extends Component {
          <Number 
             name={cars[1].name} 
             age={cars[1].age}
+            onChangeTitle = {() => {this.changeTitleHendler(cars[1].name)}}
           
           />
          <Number 
             name={cars[2].name}
-            age={cars[2].age} 
+            age={cars[2].age}
+            onChangeTitle = {() => {this.changeTitleHendler(cars[2].name)}} 
           />
        
       
