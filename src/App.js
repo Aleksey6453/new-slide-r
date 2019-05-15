@@ -20,7 +20,12 @@ class App extends Component {
     this.setState({
       pageTitle: newTitle
     })
+  }
 
+  hendleImput = (event) => {
+    this.setState({
+      pageTitle: event.target.value
+    })
   }
 
   render(){
@@ -29,6 +34,9 @@ class App extends Component {
     return (
       <div className="wrap">
          <h1>{this.state.pageTitle}</h1>
+
+         <input onChange={this.hendleImput} type="text" placeholder="text please"/>
+        
 
          <button onClick={this.changeTitleHendler.bind(this, "Clickamba!")}>
             Click
