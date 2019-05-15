@@ -15,11 +15,8 @@ class App extends Component {
     pageTitle : "React Title"
   }
 
-  changeTitleHendler = () => {
+  changeTitleHendler = (newTitle) => {
 
-    const oldTitle = this.state.pageTitle;
-    const newTitle = oldTitle + " " + "G"
-    
     this.setState({
       pageTitle: newTitle
     })
@@ -33,11 +30,24 @@ class App extends Component {
       <div className="wrap">
          <h1>{this.state.pageTitle}</h1>
 
-         <button onClick={this.changeTitleHendler}>Click</button>
+         <button onClick={this.changeTitleHendler.bind(this, "Clickamba!")}>
+            Click
+         </button>
 
-         <Number name={cars[0].name} age={cars[0].age}/>
-         <Number name={cars[1].name} age={cars[1].age}/>
-         <Number name={cars[2].name} age={cars[2].age} />
+         <Number 
+            name={cars[0].name} 
+            age={cars[0].age}
+            onChangeTitle = {this.changeTitleHendler.bind(this, cars[0].name)}
+          />
+         <Number 
+            name={cars[1].name} 
+            age={cars[1].age}
+          
+          />
+         <Number 
+            name={cars[2].name}
+            age={cars[2].age} 
+          />
        
       
       </div>
