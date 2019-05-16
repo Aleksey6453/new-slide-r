@@ -12,21 +12,21 @@ class App extends Component {
       {name: "Мицуба", age : 13},
       {name: "Mazda", age : 10}
     ],
-    pageTitle : "React Title"
+    pageTitle : "React Title",
+    showCars: false
   }
 
-  changeTitleHendler = (newTitle) => {
+  toggleCarsHendler = () => { 
 
     this.setState({
-      pageTitle: newTitle
+      showCars: !this.state.showCars
     })
   }
 
-  hendleImput = (event) => {
-    this.setState({
-      pageTitle: event.target.value
-    })
+  changeTitleHendler = (pageTitle) => {
+      this.setState({pageTitle})
   }
+
 
   render(){
     const cars = this.state.cars
@@ -35,23 +35,23 @@ class App extends Component {
       <div className="wrap">
          <h1>{this.state.pageTitle}</h1>
 
-         <input onChange={this.hendleImput} type="text" placeholder="text please"/>
-        
-
-         <button onClick={this.changeTitleHendler.bind(this, "Clickamba!")}>
-            Click
+         <button onClick={this.toggleCarsHendler}>
+            Toggle cars
          </button>
 
-         {this.state.cars.map((car, index) => {
-            return (
-              <Number
-                 key = {index}
-                 name = {car.name}
-                 age = {car.age}
-                 onChangeTitle = {()=>{this.changeTitleHendler(car.name)}}
-              />
-            )
-         })}
+         {this.state.showCars
+            ? this.state.cars.map((car, index) => {
+                return (
+                  <Number
+                    key = {index}
+                    name = {car.name}
+                    age = {car.age}
+                    onChangeTitle = {()=>{this.changeTitleHendler(car.name)}}
+                  />
+                )
+              })
+              : null
+         }
 
       </div>
       
