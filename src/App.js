@@ -42,26 +42,17 @@ class App extends Component {
             Click
          </button>
 
-         {this.state.cars}
+         {this.state.cars.map((car, index) => {
+            return (
+              <Number
+                 key = {index}
+                 name = {car.name}
+                 age = {car.age}
+                 onChangeTitle = {()=>{this.changeTitleHendler(car.name)}}
+              />
+            )
+         })}
 
-         {/* <Number 
-            name={cars[0].name} 
-            age={cars[0].age}
-            onChangeTitle = {this.changeTitleHendler.bind(this, cars[0].name)}
-          />
-         <Number 
-            name={cars[1].name} 
-            age={cars[1].age}
-            onChangeTitle = {() => {this.changeTitleHendler(cars[1].name)}}
-          
-          />
-         <Number 
-            name={cars[2].name}
-            age={cars[2].age}
-            onChangeTitle = {() => {this.changeTitleHendler(cars[2].name)}} 
-          /> */}
-       
-      
       </div>
       
    
