@@ -42,7 +42,9 @@ class App extends Component {
             Click
          </button>
 
-         <Number 
+         {this.state.cars}
+
+         {/* <Number 
             name={cars[0].name} 
             age={cars[0].age}
             onChangeTitle = {this.changeTitleHendler.bind(this, cars[0].name)}
@@ -57,7 +59,7 @@ class App extends Component {
             name={cars[2].name}
             age={cars[2].age}
             onChangeTitle = {() => {this.changeTitleHendler(cars[2].name)}} 
-          />
+          /> */}
        
       
       </div>
