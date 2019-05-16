@@ -10,7 +10,8 @@ class App extends Component {
     cars : [
       {name: "Audё", age : 7},
       {name: "Мицуба", age : 13},
-      {name: "Mazda", age : 10}
+      {name: "Mazda", age : 10},
+      {name: "Miura", age : 9}
     ],
     pageTitle : "React Title",
     showCars: false
@@ -23,10 +24,18 @@ class App extends Component {
     })
   }
 
-  changeTitleHendler = (pageTitle) => {
-      this.setState({pageTitle})
+  onChangeName = (name, index) => {
+     console.log(name, index)
+     const car = this.state.cars[index]
+     car.name = name
+     const cars = [...this.state.cars]
+     cars[index] = car
+     this.setState({
+       cars : cars
+     })
   }
 
+ 
 
   render(){
   
@@ -39,7 +48,7 @@ class App extends Component {
               key = {index}
               name = {car.name}
               age = {car.age}
-              onChangeTitle = {()=>{this.changeTitleHendler(car.name)}}
+              onChangeName = {(event)=>{this.onChangeName(event.target.value, index)}}
             />
           )
         })
