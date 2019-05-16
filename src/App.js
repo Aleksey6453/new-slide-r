@@ -29,7 +29,21 @@ class App extends Component {
 
 
   render(){
-    const cars = this.state.cars
+  
+    let cars = null;
+
+    if(this.state.showCars){
+       cars = this.state.cars.map((car, index) => {
+          return (
+            <Number
+              key = {index}
+              name = {car.name}
+              age = {car.age}
+              onChangeTitle = {()=>{this.changeTitleHendler(car.name)}}
+            />
+          )
+        })
+    }
 
     return (
       <div className="wrap">
@@ -39,19 +53,7 @@ class App extends Component {
             Toggle cars
          </button>
 
-         {this.state.showCars
-            ? this.state.cars.map((car, index) => {
-                return (
-                  <Number
-                    key = {index}
-                    name = {car.name}
-                    age = {car.age}
-                    onChangeTitle = {()=>{this.changeTitleHendler(car.name)}}
-                  />
-                )
-              })
-              : null
-         }
+         { cars }
 
       </div>
       
