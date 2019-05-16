@@ -11,7 +11,7 @@ class App extends Component {
       {name: "Audё", age : 7},
       {name: "Мицуба", age : 13},
       {name: "Mazda", age : 10},
-      {name: "Miura", age : 9}
+
     ],
     pageTitle : "React Title",
     showCars: false
@@ -35,6 +35,12 @@ class App extends Component {
      })
   }
 
+  deleteHandler(){
+    this.setState({
+      pageTitle: "Lads"
+    })
+  }
+
  
 
   render(){
@@ -48,6 +54,7 @@ class App extends Component {
               key = {index}
               name = {car.name}
               age = {car.age}
+              onDelete={this.deleteHandler.bind(this, index)}
               onChangeName = {(event)=>{this.onChangeName(event.target.value, index)}}
             />
           )
@@ -70,10 +77,6 @@ class App extends Component {
     );
   }
 }
-
-
-
-
 
 
 export default App;
