@@ -5,7 +5,7 @@ const Number = (props) => {
        <div>
            <h2>Car name : {props.name}</h2>
            <p>Age car : {props.age}</p>
-           <button onClick={props.onChangeTitle}>Gmuck</button>
+           <button onClick={props.onChangeTitle} className="btn">Gmuck</button>
        </div>  
     )
     

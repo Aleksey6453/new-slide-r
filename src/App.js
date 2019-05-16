@@ -35,7 +35,7 @@ class App extends Component {
       <div className="wrap">
          <h1>{this.state.pageTitle}</h1>
 
-         <button onClick={this.toggleCarsHendler}>
+         <button className="btn" onClick={this.toggleCarsHendler}>
             Toggle cars
          </button>
 
