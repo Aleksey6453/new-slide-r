@@ -35,10 +35,11 @@ class App extends Component {
      })
   }
 
-  deleteHandler(){
-    this.setState({
-      pageTitle: "Lads"
-    })
+  deleteHandler(index){
+    const cars = this.state.cars.concat()
+    cars.splice(index, 1)
+
+    this.setState({cars})
   }
 
  
