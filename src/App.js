@@ -6,16 +6,21 @@ import Number from './components/number'
 
 class App extends Component {
 
-  state = {
-    cars : [
-      {name: "Audё", age : 7},
-      {name: "Мицуба", age : 13},
-      {name: "Mazda", age : 10},
+  constructor(props){
+    super(props)
 
-    ],
-    pageTitle : "React Title",
-    showCars: false
+    this.state = {
+      cars : [
+        {name: "Audё", age : 7},
+        {name: "Мицуба", age : 13},
+        {name: "Mazda", age : 10},
+  
+      ],
+      pageTitle : "React Title",
+      showCars: false
+    }
   }
+
 
   toggleCarsHendler = () => { 
 
