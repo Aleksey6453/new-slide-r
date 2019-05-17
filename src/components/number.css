@@ -1,0 +1,16 @@
+.input {
+   outline: none
+}
+
+.input.green {
+   border: 2px solid lime
+}
+
+.input.red {
+   border: 2px solid red
+}
+
+.input.bold {
+   border: 3px solid lime;
+   font-weight: bold;
+}

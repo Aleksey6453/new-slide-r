@@ -2,7 +2,17 @@ import React from "react";
 import "./number.css";
 
 const Number = (props) => {
-    const inputClasses = []
+    const inputClasses = ["input"]
+
+    if (props.name !== " ") {
+        inputClasses.push("green")
+    } else {
+        inputClasses.push("red")
+    }
+
+    if(props.name.length > 4){
+        inputClasses.push("bold")
+    }
 
     return (
        <div className="CarSt">
@@ -12,6 +22,7 @@ const Number = (props) => {
                 type="text" 
                 onChange={props.onChangeName}
                  value={props.name}
+                className = {inputClasses.join(" ")}
             />
            <button onClick={props.onDelete} className="btn margin-left">Del</button>
        </div>  
@@ -20,3 +31,4 @@ const Number = (props) => {
 }
 
 export default Number
+
