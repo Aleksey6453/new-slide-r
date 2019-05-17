@@ -7,13 +7,14 @@ import Number from './components/number'
 class App extends Component {
 
   constructor(props){
+    console.log("App constructor")
     super(props)
 
     this.state = {
       cars : [
         {name: "Audё", age : 7},
-        {name: "Мицуба", age : 13},
-        {name: "Mazda", age : 10},
+        // {name: "Мицуба", age : 13},
+        // {name: "Mazda", age : 10},
   
       ],
       pageTitle : "React Title",
@@ -47,10 +48,15 @@ class App extends Component {
     this.setState({cars})
   }
 
- 
+  componentWillMount(){
+    console.log("App WillMount")
+  }
 
+  componentDidMount(){
+    console.log("App DidMount")
+  }
   render(){
-  
+    console.log("App render")
     let cars = null;
 
     if(this.state.showCars){

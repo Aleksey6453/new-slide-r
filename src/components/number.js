@@ -1,34 +1,61 @@
 import React from "react";
 import "./number.css";
 
-const Number = (props) => {
-    const inputClasses = ["input"]
 
-    if (props.name !== " ") {
-        inputClasses.push("green")
-    } else {
-        inputClasses.push("red")
-    }
-
-    if(props.name.length > 4){
-        inputClasses.push("bold")
-    }
-
-    return (
-       <div className="CarSt">
-           <h2>Car name : {props.name}</h2>
-           <p>Age car : {props.age}</p>
-           <input 
-                type="text" 
-                onChange={props.onChangeName}
-                 value={props.name}
-                className = {inputClasses.join(" ")}
-            />
-           <button onClick={props.onDelete} className="btn margin-left">Del</button>
-       </div>  
-    )
-    
+class Number extends React.Component {
+componentWillReceiveProps (nextProps) {
+  console.log("Number WillRecivProps", nextProps)
 }
+
+shouldComponentUpdate (nextProps, nextState) {
+    console.log("Number ShouldComponentUpdeyt", nextProps, nextState)
+    return true
+}
+
+componentWillUpdate (nextProps, nextState) {
+    console.log("Number WillUpdeyt", nextProps, nextState)
+}
+
+componentDidUpdate () {
+    console.log("Number DidUpdeyt")
+}
+
+componentWillUnmount () {
+    console.log("Number WillUnMount")
+}
+
+   render() {
+
+        console.log("Number render")
+        const inputClasses = ["input"]
+
+        if (this.props.name !== " ") {
+            inputClasses.push("green")
+        } else {
+            inputClasses.push("red")
+        }
+
+        if(this.props.name.length > 4){
+            inputClasses.push("bold")
+        }
+
+        return (
+        <div className="CarSt">
+            <h2>Car name : {this.props.name}</h2>
+            <p>Age car : {this.props.age}</p>
+            <input 
+                    type="text" 
+                    onChange={this.props.onChangeName}
+                    value={this.props.name}
+                    className = {inputClasses.join(" ")}
+                />
+            <button onClick={this.props.onDelete} className="btn margin-left">Del</button>
+        </div>  
+        )
+    }
+}
+
+
 
 export default Number
 
