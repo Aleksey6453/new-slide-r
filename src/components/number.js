@@ -12,8 +12,13 @@ shouldComponentUpdate (nextProps, nextState) {
     return true
 }
 
-componentWillUpdate (nextProps, nextState) {
-    console.log("Number WillUpdeyt", nextProps, nextState)
+componentWillUpdate (nextProps, prevState) {
+    console.log("Number WillUpdeyt", nextProps, prevState)
+    return prevState
+}
+
+static getDerivedStateFromProps(nextProps, prevState) {
+    console.log("Number getDerivedStateFromProps", nextProps, prevState)
 }
 
 componentDidUpdate () {
