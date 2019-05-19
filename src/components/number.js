@@ -37,9 +37,9 @@ componentWillUnmount () {
 
         console.log("Number render")
 
-        if (Math.random() > 0.7) {
-           throw new Error("Random error")      
-          }
+        // if (Math.random() > 0.7) {
+        //    throw new Error("Random error")      
+        //   }
 
         const inputClasses = ["input"]
 

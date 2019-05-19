@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Number from './components/number'
 import ErrorBound from './errorBound/errorBound'
+import Counter from './Counter/Counter'
 
 
 
@@ -13,8 +14,8 @@ class App extends Component {
 
     this.state = {
       cars : [
-        {name: "Audё", age : 7},
-        {name: "Мицуба", age : 13},
+        // {name: "Audё", age : 7},
+        // {name: "Мицуба", age : 13},
         {name: "Mazda", age : 10},
   
       ],
@@ -81,6 +82,8 @@ class App extends Component {
          {/* <h1>{this.state.pageTitle}</h1> */}
 
          <h1>{this.props.title}</h1>
+
+         <Counter />
 
          <button className="btn" onClick={this.toggleCarsHendler}>
             Toggle cars
