@@ -25,9 +25,9 @@ componentDidUpdate () {
     console.log("Number DidUpdeyt")
 }
 
-getSnapshotBeforeUpdate () {
-    console.log("Number getSnapshotBeforUpdate")
-}
+// getSnapshotBeforeUpdate () {
+//     console.log("Number getSnapshotBeforUpdate")
+// }
 
 componentWillUnmount () {
     console.log("Number WillUnMount")
@@ -36,6 +36,11 @@ componentWillUnmount () {
    render() {
 
         console.log("Number render")
+
+        if (Math.random() > 0.7) {
+           throw new Error("Random error")      
+          }
+
         const inputClasses = ["input"]
 
         if (this.props.name !== " ") {
