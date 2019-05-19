@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Number from './components/number'
+import ErrorBound from './errorBound/errorBound'
 
 
 
@@ -13,8 +14,8 @@ class App extends Component {
     this.state = {
       cars : [
         {name: "Audё", age : 7},
-        // {name: "Мицуба", age : 13},
-        // {name: "Mazda", age : 10},
+        {name: "Мицуба", age : 13},
+        {name: "Mazda", age : 10},
   
       ],
       pageTitle : "React Title",
@@ -62,13 +63,15 @@ class App extends Component {
     if(this.state.showCars){
        cars = this.state.cars.map((car, index) => {
           return (
-            <Number
-              key = {index}
-              name = {car.name}
-              age = {car.age}
-              onDelete={this.deleteHandler.bind(this, index)}
-              onChangeName = {(event)=>{this.onChangeName(event.target.value, index)}}
-            />
+            <ErrorBound  key = {index}>
+               <Number
+                  name = {car.name}
+                  age = {car.age}
+                  onDelete={this.deleteHandler.bind(this, index)}
+                  onChangeName = {(event)=>{this.onChangeName(event.target.value, index)}}
+                />
+            </ErrorBound>
+            
           )
         })
     }

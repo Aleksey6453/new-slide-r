@@ -17,12 +17,16 @@ componentWillUpdate (nextProps, prevState) {
     return prevState
 }
 
-static getDerivedStateFromProps(nextProps, prevState) {
-    console.log("Number getDerivedStateFromProps", nextProps, prevState)
-}
+// static getDerivedStateFromProps(nextProps, prevState) {
+//     console.log("Number getDerivedStateFromProps", nextProps, prevState)
+// }
 
 componentDidUpdate () {
     console.log("Number DidUpdeyt")
+}
+
+getSnapshotBeforeUpdate () {
+    console.log("Number getSnapshotBeforUpdate")
 }
 
 componentWillUnmount () {
