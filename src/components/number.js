@@ -7,39 +7,10 @@ componentWillReceiveProps (nextProps) {
   console.log("Number WillRecivProps", nextProps)
 }
 
-shouldComponentUpdate (nextProps, nextState) {
-    console.log("Number ShouldComponentUpdeyt", nextProps, nextState)
-    return true
-}
-
-componentWillUpdate (nextProps, prevState) {
-    console.log("Number WillUpdeyt", nextProps, prevState)
-    return prevState
-}
-
-// static getDerivedStateFromProps(nextProps, prevState) {
-//     console.log("Number getDerivedStateFromProps", nextProps, prevState)
-// }
-
-componentDidUpdate () {
-    console.log("Number DidUpdeyt")
-}
-
-// getSnapshotBeforeUpdate () {
-//     console.log("Number getSnapshotBeforUpdate")
-// }
-
-componentWillUnmount () {
-    console.log("Number WillUnMount")
-}
-
    render() {
 
         console.log("Number render")
 
-        // if (Math.random() > 0.7) {
-        //    throw new Error("Random error")      
-        //   }
 
         const inputClasses = ["input"]
 
