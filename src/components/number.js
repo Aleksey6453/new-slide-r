@@ -1,5 +1,6 @@
 import React from "react";
 import "./number.css";
+import withClass from "../hoc/withClass";
 
 
 class Number extends React.Component {
@@ -42,5 +43,5 @@ componentWillReceiveProps (nextProps) {
 
 
 
-export default Number
+export default withClass(Number, number.Number)
 

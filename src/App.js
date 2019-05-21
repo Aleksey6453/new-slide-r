@@ -3,6 +3,7 @@ import './App.css';
 import Number from './components/number'
 import ErrorBound from './errorBound/errorBound'
 import Counter from './Counter/Counter'
+import WithClass from './hoc/withClass'
 
 
 
@@ -90,6 +91,8 @@ class App extends Component {
          </button>
 
          { cars }
+
+         <WithClass />
 
       </div>
       
